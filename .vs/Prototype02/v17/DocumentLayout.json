@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Prototype02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39AA1337-1C33-9A11-28A6-3A6D6E744ECE}|Assembly-CSharp-firstpass.csproj|c:\\users\\zenbook\\onedrive - c\u00E9gep marie-victorin\\420-211\\session_5\\dev jeux\\laboratoire_01\\prototype02\\assets\\standard assets\\standard assets\\environment\\water\\water\\shaders\\fxwaterpro.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{39AA1337-1C33-9A11-28A6-3A6D6E744ECE}|Assembly-CSharp-firstpass.csproj|solutionrelative:assets\\standard assets\\standard assets\\environment\\water\\water\\shaders\\fxwaterpro.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FXWaterPro.shader",
+              "DocumentMoniker": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Prototype02\\Assets\\Standard Assets\\Standard Assets\\Environment\\Water\\Water\\Shaders\\FXWaterPro.shader",
+              "RelativeDocumentMoniker": "Assets\\Standard Assets\\Standard Assets\\Environment\\Water\\Water\\Shaders\\FXWaterPro.shader",
+              "ToolTip": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Prototype02\\Assets\\Standard Assets\\Standard Assets\\Environment\\Water\\Water\\Shaders\\FXWaterPro.shader",
+              "RelativeToolTip": "Assets\\Standard Assets\\Standard Assets\\Environment\\Water\\Water\\Shaders\\FXWaterPro.shader",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2024-09-09T02:01:14.206Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
