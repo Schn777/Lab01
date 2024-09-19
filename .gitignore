@@ -1,0 +1,14 @@
+# Ignorer les dossiers Unity générés automatiquement
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Pp]ackages/
+[Pp]rojectSettings/
+
+# Ignorer les caches des paquets Unity
+[Ll]ibrary/PackageCache/
+[Ll]ibrary/ScriptAssemblies/

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Laboratoire03\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{25B299F9-AB2D-7147-A91F-1E3CF8FF23EF}|Assembly-CSharp.csproj|c:\\users\\zenbook\\onedrive - c\u00E9gep marie-victorin\\420-211\\session_5\\dev jeux\\laboratoire_01\\laboratoire03\\assets\\scripts\\exitdoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25B299F9-AB2D-7147-A91F-1E3CF8FF23EF}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\exitdoor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ExitDoor.cs",
+              "DocumentMoniker": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Laboratoire03\\Assets\\Scripts\\ExitDoor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ExitDoor.cs",
+              "ToolTip": "C:\\Users\\zenbook\\OneDrive - C\u00E9gep Marie-Victorin\\420-211\\Session_5\\Dev jeux\\Laboratoire_01\\Laboratoire03\\Assets\\Scripts\\ExitDoor.cs*",
+              "RelativeToolTip": "Assets\\Scripts\\ExitDoor.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-17T21:54:53.992Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
