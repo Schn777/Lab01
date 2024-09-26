@@ -4,7 +4,7 @@ using UnityEngine;
  
 public class ExitDoor : MonoBehaviour
 {
-   // public bool CanOpen = false;
+    public bool CanOpen = false;
     Animator animator;
 
     void Start(){

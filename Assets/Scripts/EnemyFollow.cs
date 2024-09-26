@@ -9,6 +9,8 @@ public class EnemyFollow : MonoBehaviour
 
     Vector3 direction;
 
+        
+
     void Start()
     {
         // Si le joueur n'est pas assigné manuellement dans l'inspecteur, trouvez-le automatiquement
@@ -22,6 +24,15 @@ public class EnemyFollow : MonoBehaviour
         if (animator != null)
         {
             animator.enabled = false;  // Désactiver l'Animator au début
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // Vérifiez si l'objet qui est entré dans le trigger a le tag "Player"
+        if ((other.CompareTag("Player")))
+        {
+          
         }
     }
 
@@ -44,8 +55,8 @@ public class EnemyFollow : MonoBehaviour
                 }
                 // // Calculer la direction vers le joueur
                 direction = new Vector3(player.position.x - transform.position.x, 0, 0).normalized;
-
-                 Debug.Log("Le joueur s'approche. Activation de l'ennemi."+ direction);
+                GameObject.Find("Life").GetComponent<Life>().Attacked = true;
+                Debug.Log("Le joueur s'approche. Activation de l'ennemi."+ direction);
 
                 // // Déplacer l'ennemi vers le joueur
                 transform.position += (direction /5) * speed * Time.deltaTime;
