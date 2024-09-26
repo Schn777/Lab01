@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Energy : MonoBehaviour
 {
+    public float Timer = 60;
     public Slider healthSlider;
     public Image healthFill;
     private float maxHealth = 100f;
@@ -12,12 +13,28 @@ public class Energy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(ChangeTimer());
         currentHealth = maxHealth;
         UpdateHeal();
     }
 
+    IEnumerator ChangeTimer()
+    {
+        while (Timer > 0)
+        {
+            healthSlider.value--;
+            
+            print(Timer);
 
+            if (healthSlider.value == 0)
+            {
+                Timer = 0;
+            }
+
+            yield return new WaitForSeconds(1);
+        }
+
+    }
 
     // Update is called once per frame
     void Update()
