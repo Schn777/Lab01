@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class FoodScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private HandleSliders handleSliders;  // Déclare handleSliders ici
+
     void Start()
     {
-        
+        GameObject gameObject = GameObject.FindGameObjectWithTag("appleTag");
+        handleSliders = GameObject.Find("Canvas").GetComponent<HandleSliders>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        // Vérifiez si l'objet qui est entré dans le trigger a le tag "Player"
+        if (other.CompareTag("Player"))
+        {
+            handleSliders.FoodBarUp(10.2f);  // Appelle la méthode correctement
+            Destroy(gameObject);
+        }
     }
 }

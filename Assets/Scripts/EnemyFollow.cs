@@ -32,6 +32,7 @@ public class EnemyFollow : MonoBehaviour
         // Vérifiez si l'objet qui est entré dans le trigger a le tag "Player"
         if ((other.CompareTag("Player")))
         {
+            Debug.Log("Le est attacke.");
             GameObject.Find("Canvas").GetComponent<HandleSliders>().Attacked = true;
         }
     }
@@ -55,7 +56,6 @@ public class EnemyFollow : MonoBehaviour
                 }
                 // // Calculer la direction vers le joueur
                 direction = new Vector3(player.position.x - transform.position.x, 0, 0).normalized;
-                //GameObject.Find("Life").GetComponent<Life>().Attacked = true;
                 //Debug.Log("Le joueur s'approche. Activation de l'ennemi."+ direction);
 
                 // // Déplacer l'ennemi vers le joueur

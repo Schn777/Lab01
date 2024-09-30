@@ -17,12 +17,13 @@ public class HandleSliders : MonoBehaviour
     private float currentEnergy;
     private float currentFood;
     public bool Attacked = false;
-    // Start is called before the first frame update
-    void Start()
+
+    void Start()
     {
         StartCoroutine(ChangeTimer());
         currentHealth = maxHealth;
-        currentEnergy = maxHealth;
+        currentEnergy = maxEnergy;  // Correction ici
+        currentFood = maxFood;
         UpdateHeal();
     }
 
@@ -39,7 +40,8 @@ public class HandleSliders : MonoBehaviour
         while (Timer > 0)
         {
             energySlider.value--;
-            
+            foodSlider.value--;
+
             print(Timer);
 
             if (energySlider.value == 0)
@@ -49,37 +51,38 @@ public class HandleSliders : MonoBehaviour
 
             yield return new WaitForSeconds(1);
         }
-
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update()
     {
-        if (Attacked) {
+        if (Attacked)
+        {
             damageHealth(20);
         }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            currentEnergy -= 10;
-            currentEnergy = Mathf.Clamp(currentEnergy, 0, maxHealth);
-            energySlider.value = currentEnergy;
-
-            UpdateHeal();
-        }
     }
-    public void TakeDamage(float damageAmout)
+
+    public void TakeDamage(float damageAmount)
     {
-        currentHealth -= damageAmout;
+        currentHealth -= damageAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHeal();
     }
-    public void HealBar(float healAmout)
+
+    public void HealBar(float healAmount)
     {
-        currentHealth += healAmout;
+        currentHealth += healAmount;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         UpdateHeal();
     }
+
+    public void FoodBarUp(float foodAmount)  // Ne pas mettre static ici
+    {
+        Debug.Log("FoodBar");
+        currentFood += foodAmount;
+        currentFood = Mathf.Clamp(currentFood, 0, maxFood);
+        foodSlider.value = currentFood;  // Met à jour le slider
+    }
+
     void UpdateHeal()
     {
         float healthPercent = currentHealth / maxHealth;
