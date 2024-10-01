@@ -23,6 +23,7 @@ public class ClaireController : MonoBehaviour {
     bool switchFoot = false;
 
     [SerializeField] bool isJumping = false;
+    [SerializeField] public bool isDead = false;
 
     private void Awake()
     {
@@ -101,7 +102,7 @@ public class ClaireController : MonoBehaviour {
 
         //Debug Dead 
 
-        if(Input.GetKeyDown(KeyCode.AltGr))
+        if(isDead)
         {
             ClaireDead();
         }

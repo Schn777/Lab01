@@ -17,13 +17,15 @@ public class HandleSliders : MonoBehaviour
     private float currentEnergy;
     private float currentFood;
     public bool Attacked = false;
+    private ClaireController claireController;
 
     void Start()
     {
         StartCoroutine(ChangeTimer());
         currentHealth = maxHealth;
-        currentEnergy = maxEnergy;  // Correction ici
+        currentEnergy = maxEnergy;  
         currentFood = maxFood;
+        claireController = GameObject.Find("ClairePlayer").GetComponent<ClaireController>();
         UpdateHeal();
     }
 
@@ -33,14 +35,15 @@ public class HandleSliders : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
         healthSlider.value = currentHealth;
         Attacked = !Attacked;
+
     }
 
     IEnumerator ChangeTimer()
     {
         while (Timer > 0)
         {
-            energySlider.value--;
-            foodSlider.value--;
+            energySlider.value-=10;
+            foodSlider.value-=10;
 
             print(Timer);
 
@@ -55,17 +58,16 @@ public class HandleSliders : MonoBehaviour
 
     void Update()
     {
+        
         if (Attacked)
         {
-            damageHealth(20);
+            damageHealth(40);
         }
-    }
-
-    public void TakeDamage(float damageAmount)
-    {
-        currentHealth -= damageAmount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        UpdateHeal();
+        if(foodSlider.value <= 0 || healthSlider.value <= 0 || energySlider.value <= 0)
+        {
+            claireController.isDead = true;
+        }
+        
     }
 
     public void HealBar(float healAmount)
@@ -75,14 +77,19 @@ public class HandleSliders : MonoBehaviour
         UpdateHeal();
     }
 
-    public void FoodBarUp(float foodAmount)  // Ne pas mettre static ici
+    public void FoodBarUp(float foodAmount) 
     {
-        Debug.Log("FoodBar");
+       
         currentFood += foodAmount;
         currentFood = Mathf.Clamp(currentFood, 0, maxFood);
-        foodSlider.value = currentFood;  // Met à jour le slider
+        foodSlider.value = currentFood;  
     }
-
+    public void EnergyBarUp(float energyAmount)  
+    {
+        currentEnergy += energyAmount;
+        currentEnergy = Mathf.Clamp(currentEnergy, 0, maxEnergy);
+        energySlider.value = currentEnergy; 
+    }
     void UpdateHeal()
     {
         float healthPercent = currentHealth / maxHealth;
