@@ -33,7 +33,7 @@ public class HandleSliders : MonoBehaviour
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        healthSlider.value = currentHealth;
+        //healthSlider.value = currentHealth;
         Attacked = !Attacked;
 
     }
@@ -42,8 +42,8 @@ public class HandleSliders : MonoBehaviour
     {
         while (Timer > 0)
         {
-            energySlider.value-=10;
-            foodSlider.value-=10;
+            //energySlider.value-=10;
+            //foodSlider.value-=10;
 
             print(Timer);
 
