@@ -34,7 +34,7 @@ public class State {
     // Variables de distance et d'angle pour détecter le joueur
     float visDist = 10.0f;               // Distance de vision
     float visAngle = 30.0f;              // Angle de vision
-    float shootDist = 7.0f;              // Distance de tir
+    float shootDist = 5.0f;              // Distance de tir
 
     // Constructeur pour initialiser les paramètres de l'état
     public State(GameObject _npc, NavMeshAgent _agent, Animator _anim, Transform _player) {

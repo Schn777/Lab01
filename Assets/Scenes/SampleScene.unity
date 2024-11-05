@@ -5440,6 +5440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -5370525323545450450, guid: 8c47006d30018d548bcb361edf4432e7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4b620e92159f4214594f9fdc8e3f581d, type: 2}
     - target: {fileID: 919132149155446097, guid: 8c47006d30018d548bcb361edf4432e7, type: 3}
       propertyPath: m_Name
       value: Mremireh O Desbiens
