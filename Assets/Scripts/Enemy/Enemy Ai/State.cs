@@ -216,7 +216,8 @@ public class Attack : State {
     public override void Enter() {
         anim.SetTrigger("isShooting");
         agent.isStopped = true;
-        shoot.Play();
+        //shoot.Play();
+        Debug.Log("Enter shoot");
         base.Enter();
     }
 
@@ -229,13 +230,15 @@ public class Attack : State {
 
         if (!CanAttackPlayer()) {
             nextState = new Idle(npc, agent, anim, player);
-            shoot.Stop();
+            //shoot.Stop();
             stage = EVENT.EXIT;
         }
     }
 
     public override void Exit() {
         anim.ResetTrigger("isShooting");
+        agent.isStopped = true;
+        Debug.Log("Exit shoot");
         base.Exit();
     }
 }
