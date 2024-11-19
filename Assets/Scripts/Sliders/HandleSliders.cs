@@ -18,6 +18,10 @@ public class HandleSliders : MonoBehaviour
     private float currentFood;
     public bool Attacked = false;
     private ClaireController claireController;
+    public Animator zombieAttack;
+    private float attackWait = 1.0f;
+    private float lastAttackTime = 0f;
+    private GameObject zombie;
 
     void Start()
     {
@@ -26,6 +30,8 @@ public class HandleSliders : MonoBehaviour
         currentEnergy = maxEnergy;  
         currentFood = maxFood;
         claireController = GameObject.Find("ClairePlayer").GetComponent<ClaireController>();
+        zombie = GameObject.Find("Mremireh O Desbiens");
+        zombieAttack = zombie.GetComponent<Animator>();
         UpdateHeal();
     }
 
@@ -33,7 +39,7 @@ public class HandleSliders : MonoBehaviour
     {
         currentHealth -= damage;
         currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        //healthSlider.value = currentHealth;
+        healthSlider.value = currentHealth;
         Attacked = !Attacked;
 
     }
@@ -58,17 +64,30 @@ public class HandleSliders : MonoBehaviour
 
     void Update()
     {
-        
-        if (Attacked)
+        if(zombie != null)
         {
-            damageHealth(40);
+            Attacked = zombieAttack.GetCurrentAnimatorStateInfo(0).IsTag("ZombeAttacking");
+            if (Attacked && Time.time >= lastAttackTime + attackWait)
+            {
+                Debug.Log("Attack");
+                zombieAttack.ResetTrigger("isShooting");
+                damageHealth(10);
+                lastAttackTime = Time.time;
+            }
         }
-        if(foodSlider.value <= 0 || healthSlider.value <= 0 || energySlider.value <= 0)
+        
+
+        //if (Attacked)
+        //{
+        //    damageHealth(40);
+        //}
+        if (foodSlider.value <= 0 || healthSlider.value <= 0 || energySlider.value <= 0)
         {
             claireController.isDead = true;
         }
         
     }
+    
 
     public void HealBar(float healAmount)
     {

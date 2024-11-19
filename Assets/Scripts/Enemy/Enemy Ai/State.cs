@@ -216,6 +216,7 @@ public class Attack : State {
     public override void Enter() {
         anim.SetTrigger("isShooting");
         agent.isStopped = true;
+
         //shoot.Play();
         Debug.Log("Enter shoot");
         base.Enter();

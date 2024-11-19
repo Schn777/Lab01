@@ -7,6 +7,7 @@ public class ClaireController : MonoBehaviour {
     Animator claireAnimator;
     AudioSource claireAudioSource;
     CapsuleCollider claireCapsule;
+    
 
     float axisH, axisV;
 
@@ -31,6 +32,7 @@ public class ClaireController : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
         claireAudioSource = GetComponent<AudioSource>();
         claireCapsule = GetComponent<CapsuleCollider>();
+
     }
 
     void Update () {
